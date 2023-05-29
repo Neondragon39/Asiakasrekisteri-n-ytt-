@@ -72,9 +72,9 @@
             // LisääYrBT
             // 
             this.LisääYrBT.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LisääYrBT.Location = new System.Drawing.Point(386, 550);
+            this.LisääYrBT.Location = new System.Drawing.Point(355, 550);
             this.LisääYrBT.Name = "LisääYrBT";
-            this.LisääYrBT.Size = new System.Drawing.Size(105, 45);
+            this.LisääYrBT.Size = new System.Drawing.Size(136, 45);
             this.LisääYrBT.TabIndex = 2;
             this.LisääYrBT.Text = "Lisää yritys";
             this.LisääYrBT.UseVisualStyleBackColor = true;
@@ -94,9 +94,9 @@
             this.LisaaTiedotBT.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LisaaTiedotBT.Location = new System.Drawing.Point(916, 550);
             this.LisaaTiedotBT.Name = "LisaaTiedotBT";
-            this.LisaaTiedotBT.Size = new System.Drawing.Size(184, 45);
+            this.LisaaTiedotBT.Size = new System.Drawing.Size(162, 45);
             this.LisaaTiedotBT.TabIndex = 4;
-            this.LisaaTiedotBT.Text = "Lisää lisätietoa";
+            this.LisaaTiedotBT.Text = "Lisää yhteystiedot\r\n";
             this.LisaaTiedotBT.UseVisualStyleBackColor = true;
             this.LisaaTiedotBT.Visible = false;
             this.LisaaTiedotBT.Click += new System.EventHandler(this.LisaaTiedotBT_Click);
@@ -104,11 +104,11 @@
             // PoistaTiedotBT
             // 
             this.PoistaTiedotBT.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PoistaTiedotBT.Location = new System.Drawing.Point(1148, 550);
+            this.PoistaTiedotBT.Location = new System.Drawing.Point(1084, 550);
             this.PoistaTiedotBT.Name = "PoistaTiedotBT";
-            this.PoistaTiedotBT.Size = new System.Drawing.Size(206, 45);
+            this.PoistaTiedotBT.Size = new System.Drawing.Size(177, 45);
             this.PoistaTiedotBT.TabIndex = 5;
-            this.PoistaTiedotBT.Text = "Poista lisätietoa";
+            this.PoistaTiedotBT.Text = "Poista yhteystiedot";
             this.PoistaTiedotBT.UseVisualStyleBackColor = true;
             this.PoistaTiedotBT.Visible = false;
             this.PoistaTiedotBT.Click += new System.EventHandler(this.PoistaTiedotBT_Click);
@@ -268,12 +268,12 @@
             // 
             // btnYritysYhteyshenkilot
             // 
-            this.btnYritysYhteyshenkilot.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnYritysYhteyshenkilot.Location = new System.Drawing.Point(959, 422);
+            this.btnYritysYhteyshenkilot.Font = new System.Drawing.Font("Kristen ITC", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnYritysYhteyshenkilot.Location = new System.Drawing.Point(1267, 550);
             this.btnYritysYhteyshenkilot.Name = "btnYritysYhteyshenkilot";
-            this.btnYritysYhteyshenkilot.Size = new System.Drawing.Size(244, 65);
+            this.btnYritysYhteyshenkilot.Size = new System.Drawing.Size(169, 45);
             this.btnYritysYhteyshenkilot.TabIndex = 27;
-            this.btnYritysYhteyshenkilot.Text = "Lisää yhteishenkilöiden yhteystiedot";
+            this.btnYritysYhteyshenkilot.Text = "Lisää yhteydenotto";
             this.btnYritysYhteyshenkilot.UseVisualStyleBackColor = true;
             this.btnYritysYhteyshenkilot.Visible = false;
             this.btnYritysYhteyshenkilot.Click += new System.EventHandler(this.btnYritysYhteyshenkilot_Click);
@@ -292,9 +292,9 @@
             // btnNaytayhteydenotot
             // 
             this.btnNaytayhteydenotot.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNaytayhteydenotot.Location = new System.Drawing.Point(1412, 550);
+            this.btnNaytayhteydenotot.Location = new System.Drawing.Point(1442, 550);
             this.btnNaytayhteydenotot.Name = "btnNaytayhteydenotot";
-            this.btnNaytayhteydenotot.Size = new System.Drawing.Size(206, 45);
+            this.btnNaytayhteydenotot.Size = new System.Drawing.Size(176, 45);
             this.btnNaytayhteydenotot.TabIndex = 29;
             this.btnNaytayhteydenotot.Text = "Näytä yhteydenotot";
             this.btnNaytayhteydenotot.UseVisualStyleBackColor = true;

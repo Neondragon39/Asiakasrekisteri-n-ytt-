@@ -13,7 +13,7 @@ namespace Asiakasrekisteri_näyttö
 {
     public partial class Form1 : Form
     {
-        public Boolean bIsYritysTiedot_ = true, bYhteyshenkilonTiedot_ = true, bPoistaTiedot_ = false;
+        public Boolean bIsYritysTiedot_ = true, bYhteyshenkilonTiedot_ = true, bPoistaTiedot_ = false, bIsYhteydenotto_ = false;
 
         public Form1()
         {
@@ -22,27 +22,24 @@ namespace Asiakasrekisteri_näyttö
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            label1.BackColor = Color.Empty;
-            label2.BackColor = Color.Empty;
-            label4.BackColor = Color.Empty;
-            label4.BackColor = Color.Empty;
+            
         }
 
         private void LisaaTiedotBT_Click(object sender, EventArgs e)
         {
             if (LisaaTiedotBT.Visible)
             {
-                btnNaytayhteydenotot.Visible = false;
                 muutaTextBoxNimetValilehdenMukaan(false);
                 textBox6.Visible = false;
 
                 if (bIsYritysTiedot_)
                 {
+                    btnNaytayhteydenotot.Visible = false;
                     bIsYritysTiedot_ = false;
 
                     btnYritysYhteyshenkilot.Visible = true;
-                    LisaaTiedotBT.Text = "Palaa lisätietoihin";
-                    label5.Text = "Lisää lisätiedot";
+                    LisaaTiedotBT.Text = "Palaa yhteystietoihin";
+                    label5.Text = "Lisää yhteystiedot";
                     PoistaTiedotBT.Visible = false;
 
                     textBox1.Visible = true;
@@ -53,11 +50,12 @@ namespace Asiakasrekisteri_näyttö
                 }
                 else if (!bIsYritysTiedot_)
                 {
+                    btnNaytayhteydenotot.Visible = true;
                     bIsYritysTiedot_ = true;
 
                     btnYritysYhteyshenkilot.Visible = false;
-                    LisaaTiedotBT.Text = "Lisää lisätietoa";
-                    label5.Text = "Yrityksen lisätiedot";
+                    LisaaTiedotBT.Text = "Lisää yhteystiedot";
+                    label5.Text = "Yrityksen yhteystiedot";
                     PoistaTiedotBT.Visible = true;
 
                     textBox1.Visible = false;
@@ -65,6 +63,9 @@ namespace Asiakasrekisteri_näyttö
                     textBox3.Visible = false;
                     textBox4.Visible = false;
                     textBox5.Visible = false;
+
+                    btnYritysYhteyshenkilot.Visible = true;
+                    btnYritysYhteyshenkilot.Text = "Lisää yhteydenotto";
                 }
             }
         }
@@ -82,7 +83,7 @@ namespace Asiakasrekisteri_näyttö
                 bYhteyshenkilonTiedot_ = false;
 
                 label5.Text = "Lisää yhteyshenkilö";
-                btnYritysYhteyshenkilot.Text = "Palaa yrityksen lisätietoihin";
+                btnYritysYhteyshenkilot.Text = "Palaa yrityksen yhteystietoihin";
 
 
             }
@@ -97,7 +98,7 @@ namespace Asiakasrekisteri_näyttö
                 textBox6.Visible = true;
                 bYhteyshenkilonTiedot_ = true;
 
-                label5.Text = "Lisää lisätiedot";
+                label5.Text = "Lisää yhteystiedot";
                 btnYritysYhteyshenkilot.Text = "Lisää yhteyshenkilöiden yhteystiedot";
             }
         }
@@ -107,7 +108,10 @@ namespace Asiakasrekisteri_näyttö
             LisaaTiedotBT.Visible = true;
             PoistaTiedotBT.Visible = true;
             btnNaytayhteydenotot.Visible = true;
-            label5.Text = "Yrityksen lisätiedot";
+            btnYritysYhteyshenkilot.Visible = true;
+            btnYritysYhteyshenkilot.Text = "Lisää yhteydenotto";
+
+            label5.Text = "Yrityksen yhteystiedot";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -120,28 +124,45 @@ namespace Asiakasrekisteri_näyttö
 
         private void btnYritysYhteyshenkilot_Click(object sender, EventArgs e)
         {
-            muutaTextBoxNimetValilehdenMukaan(bYhteyshenkilonTiedot_);
+            if (!btnNaytayhteydenotot.Visible)
+                muutaTextBoxNimetValilehdenMukaan(bYhteyshenkilonTiedot_);
+            else if (!bIsYhteydenotto_)
+            {
+                label5.Text = "Lisää yhteydenotto";
+                btnYritysYhteyshenkilot.Text = "Palaa";
+                bIsYhteydenotto_ = true;
+            }
+            else if (bIsYhteydenotto_)
+            {
+                label5.Text = "Yrityksen yhteystiedot";
+                btnYritysYhteyshenkilot.Text = "Lisää yhteydenotto";
+                bIsYhteydenotto_ = false;
+            }
         }
 
         private void PoistaTiedotBT_Click(object sender, EventArgs e)
         {
-            btnNaytayhteydenotot.Visible = false;
             if (bPoistaTiedot_)
             {
+                btnNaytayhteydenotot.Visible = true;
                 bPoistaTiedot_ = false;
 
                 btnYritysYhteyshenkilot.Visible = false;
-                PoistaTiedotBT.Text = "Poista lisätietoa";
-                label5.Text = "Yrityksen lisätiedot";
+                PoistaTiedotBT.Text = "Poista yhteystietoa";
+                label5.Text = "Yrityksen yhteystiedot";
                 LisaaTiedotBT.Visible = true;
+
+                btnYritysYhteyshenkilot.Visible = true;
+                btnYritysYhteyshenkilot.Text = "Lisää yhteydenotto";
             }
             else if (!bPoistaTiedot_)
             {
+                btnNaytayhteydenotot.Visible = false;
                 bPoistaTiedot_ = true;
 
                 btnYritysYhteyshenkilot.Visible = false;
-                PoistaTiedotBT.Text = "Palaa lisätietoihin";
-                label5.Text = "Poista lisätietoja";
+                PoistaTiedotBT.Text = "Palaa yhteystietoihin";
+                label5.Text = "Poista yhteystietoja";
                 LisaaTiedotBT.Visible = false;
 
                 textBox1.Visible = false;
