@@ -10,11 +10,6 @@ using System.Windows.Forms;
 
 namespace Asiakasrekisteri_näyttö
 {
-    public class Asiakas
-    {
-        
-    }
-
     public partial class Form1 : Form
     {
         public Form1()
@@ -26,5 +21,9 @@ namespace Asiakasrekisteri_näyttö
         {
 
         }
+    }
+    public class Asiakas
+    {
+
     }
 }
