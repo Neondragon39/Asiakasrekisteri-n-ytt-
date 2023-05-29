@@ -22,18 +22,4 @@ namespace Asiakasrekisteri_näyttö
 
         }
     }
-
-    // Asiakas Yritys luokka, joka pitää sisällään asiakasyroityksen tiedot
-    public class AsiakasYritys : AsiakasYhteyshenkilot
-    {
-        public String nimi_ = "", yTunnus_ = "", osoite_ = "", kaupunki_ = "", toimiala_ = "";
-        public int    postNumero_ = 0, puh_ = 0;
-
-    }
-
-    // Asiakkaan yhteyshenkilön tiedot luokka
-    public class AsiakasYhteyshenkilot
-    {
-        public String aRooli_ = "", aNimi_ = "", aSPost_ = "", aPuh_ = "";
-    }
 }
