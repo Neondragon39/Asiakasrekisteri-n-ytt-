@@ -112,7 +112,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Kristen ITC", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label2.Location = new System.Drawing.Point(89, 12);
+            this.label2.Location = new System.Drawing.Point(89, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(303, 33);
             this.label2.TabIndex = 9;
