@@ -119,6 +119,7 @@
             this.label2.Size = new System.Drawing.Size(303, 33);
             this.label2.TabIndex = 9;
             this.label2.Text = "Coding for the future ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // YrityksetGV
             // 

@@ -31,5 +31,10 @@ namespace Asiakasrekisteri_näyttö
             LisaaTiedotBT.Text = "Palaa lisätietoihin";
             label5.Text = "Lisää lisätiedot";
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=AyOqGRjVtls");
+        }
     }
 }
