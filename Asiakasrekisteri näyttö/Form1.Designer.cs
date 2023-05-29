@@ -47,7 +47,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnYritysYhteyshenkilot = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.YrityksetGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LisätiedotGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,21 +70,21 @@
             // LisääYrBT
             // 
             this.LisääYrBT.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LisääYrBT.Location = new System.Drawing.Point(386, 568);
+            this.LisääYrBT.Location = new System.Drawing.Point(386, 550);
             this.LisääYrBT.Name = "LisääYrBT";
-            this.LisääYrBT.Size = new System.Drawing.Size(165, 27);
+            this.LisääYrBT.Size = new System.Drawing.Size(165, 45);
             this.LisääYrBT.TabIndex = 2;
-            this.LisääYrBT.Text = "Lisää";
+            this.LisääYrBT.Text = "Lisää yritys";
             this.LisääYrBT.UseVisualStyleBackColor = true;
             // 
             // PoistaYrBT
             // 
             this.PoistaYrBT.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PoistaYrBT.Location = new System.Drawing.Point(590, 568);
+            this.PoistaYrBT.Location = new System.Drawing.Point(590, 550);
             this.PoistaYrBT.Name = "PoistaYrBT";
-            this.PoistaYrBT.Size = new System.Drawing.Size(165, 27);
+            this.PoistaYrBT.Size = new System.Drawing.Size(165, 45);
             this.PoistaYrBT.TabIndex = 3;
-            this.PoistaYrBT.Text = "Poista";
+            this.PoistaYrBT.Text = "Poista yritys";
             this.PoistaYrBT.UseVisualStyleBackColor = true;
             // 
             // LisaaTiedotBT
@@ -91,19 +92,20 @@
             this.LisaaTiedotBT.Font = new System.Drawing.Font("Kristen ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LisaaTiedotBT.Location = new System.Drawing.Point(916, 550);
             this.LisaaTiedotBT.Name = "LisaaTiedotBT";
-            this.LisaaTiedotBT.Size = new System.Drawing.Size(267, 45);
+            this.LisaaTiedotBT.Size = new System.Drawing.Size(310, 45);
             this.LisaaTiedotBT.TabIndex = 4;
-            this.LisaaTiedotBT.Text = "Lisää";
+            this.LisaaTiedotBT.Text = "Lisää lisätietoa";
             this.LisaaTiedotBT.UseVisualStyleBackColor = true;
+            this.LisaaTiedotBT.Click += new System.EventHandler(this.LisaaTiedotBT_Click);
             // 
             // PoistaTiedotBT
             // 
             this.PoistaTiedotBT.Font = new System.Drawing.Font("Kristen ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PoistaTiedotBT.Location = new System.Drawing.Point(1379, 550);
+            this.PoistaTiedotBT.Location = new System.Drawing.Point(1304, 550);
             this.PoistaTiedotBT.Name = "PoistaTiedotBT";
-            this.PoistaTiedotBT.Size = new System.Drawing.Size(239, 45);
+            this.PoistaTiedotBT.Size = new System.Drawing.Size(314, 45);
             this.PoistaTiedotBT.TabIndex = 5;
-            this.PoistaTiedotBT.Text = "Poista";
+            this.PoistaTiedotBT.Text = "Poista lisätietoa";
             this.PoistaTiedotBT.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -111,7 +113,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Kristen ITC", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(89, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(303, 33);
@@ -136,7 +138,6 @@
             this.LisätiedotGV.Name = "LisätiedotGV";
             this.LisätiedotGV.Size = new System.Drawing.Size(702, 417);
             this.LisätiedotGV.TabIndex = 14;
-            this.LisätiedotGV.Visible = false;
             // 
             // LisääYrTB
             // 
@@ -184,59 +185,92 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(916, 137);
+            this.textBox1.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(916, 174);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(345, 32);
             this.textBox1.TabIndex = 19;
+            this.textBox1.Text = "Y-Tunnus";
+            this.textBox1.Visible = false;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(916, 206);
+            this.textBox3.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(916, 262);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(345, 32);
             this.textBox3.TabIndex = 20;
+            this.textBox3.Text = "Postinumero";
+            this.textBox3.Visible = false;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(916, 294);
+            this.textBox5.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(916, 362);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(345, 32);
             this.textBox5.TabIndex = 21;
+            this.textBox5.Text = "Toimiala";
+            this.textBox5.Visible = false;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(1273, 137);
+            this.textBox2.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(1273, 174);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(345, 32);
             this.textBox2.TabIndex = 22;
+            this.textBox2.Text = "Katuosoite";
+            this.textBox2.Visible = false;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(1273, 206);
+            this.textBox4.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(1273, 262);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(345, 32);
             this.textBox4.TabIndex = 23;
+            this.textBox4.Text = "Kaupunki";
+            this.textBox4.Visible = false;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(1273, 294);
+            this.textBox6.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(1273, 362);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(345, 32);
             this.textBox6.TabIndex = 24;
+            this.textBox6.Text = "Puhelinnumero";
+            this.textBox6.Visible = false;
             // 
-            // textBox7
+            // label3
             // 
-            this.textBox7.Location = new System.Drawing.Point(1103, 377);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(330, 32);
-            this.textBox7.TabIndex = 25;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Kristen ITC", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(92, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 16);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Ohketoimi Oy";
+            // 
+            // btnYritysYhteyshenkilot
+            // 
+            this.btnYritysYhteyshenkilot.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnYritysYhteyshenkilot.Location = new System.Drawing.Point(959, 422);
+            this.btnYritysYhteyshenkilot.Name = "btnYritysYhteyshenkilot";
+            this.btnYritysYhteyshenkilot.Size = new System.Drawing.Size(244, 65);
+            this.btnYritysYhteyshenkilot.TabIndex = 27;
+            this.btnYritysYhteyshenkilot.Text = "Lisää yhteishenkilöiden yhteystiedot";
+            this.btnYritysYhteyshenkilot.UseVisualStyleBackColor = true;
+            this.btnYritysYhteyshenkilot.Visible = false;
             // 
             // Form1
             // 
@@ -244,7 +278,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1792, 650);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.btnYritysYhteyshenkilot);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox2);
@@ -294,7 +329,8 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnYritysYhteyshenkilot;
     }
 }
 

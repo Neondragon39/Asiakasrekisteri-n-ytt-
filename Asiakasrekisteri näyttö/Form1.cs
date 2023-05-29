@@ -24,5 +24,12 @@ namespace Asiakasrekisteri_näyttö
             label4.BackColor = Color.Empty;
             label4.BackColor = Color.Empty;
         }
+
+        private void LisaaTiedotBT_Click(object sender, EventArgs e)
+        {
+            btnYritysYhteyshenkilot.Visible = true;
+            LisaaTiedotBT.Text = "Palaa lisätietoihin";
+            label5.Text = "Lisää lisätiedot";
+        }
     }
 }
