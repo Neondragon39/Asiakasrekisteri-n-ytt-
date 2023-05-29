@@ -56,34 +56,37 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(896, 21);
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Kristen ITC", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(623, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 20);
+            this.label1.Size = new System.Drawing.Size(419, 68);
             this.label1.TabIndex = 0;
             this.label1.Text = "Asiakasrekisteri";
             // 
             // LisääYrBT
             // 
-            this.LisääYrBT.Location = new System.Drawing.Point(389, 572);
+            this.LisääYrBT.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LisääYrBT.Location = new System.Drawing.Point(386, 568);
             this.LisääYrBT.Name = "LisääYrBT";
-            this.LisääYrBT.Size = new System.Drawing.Size(165, 23);
+            this.LisääYrBT.Size = new System.Drawing.Size(165, 27);
             this.LisääYrBT.TabIndex = 2;
             this.LisääYrBT.Text = "Lisää";
             this.LisääYrBT.UseVisualStyleBackColor = true;
             // 
             // PoistaYrBT
             // 
-            this.PoistaYrBT.Location = new System.Drawing.Point(590, 572);
+            this.PoistaYrBT.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PoistaYrBT.Location = new System.Drawing.Point(590, 568);
             this.PoistaYrBT.Name = "PoistaYrBT";
-            this.PoistaYrBT.Size = new System.Drawing.Size(165, 23);
+            this.PoistaYrBT.Size = new System.Drawing.Size(165, 27);
             this.PoistaYrBT.TabIndex = 3;
             this.PoistaYrBT.Text = "Poista";
             this.PoistaYrBT.UseVisualStyleBackColor = true;
             // 
             // LisaaTiedotBT
             // 
-            this.LisaaTiedotBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LisaaTiedotBT.Font = new System.Drawing.Font("Kristen ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LisaaTiedotBT.Location = new System.Drawing.Point(916, 550);
             this.LisaaTiedotBT.Name = "LisaaTiedotBT";
             this.LisaaTiedotBT.Size = new System.Drawing.Size(267, 45);
@@ -93,7 +96,7 @@
             // 
             // PoistaTiedotBT
             // 
-            this.PoistaTiedotBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PoistaTiedotBT.Font = new System.Drawing.Font("Kristen ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PoistaTiedotBT.Location = new System.Drawing.Point(1379, 550);
             this.PoistaTiedotBT.Name = "PoistaTiedotBT";
             this.PoistaTiedotBT.Size = new System.Drawing.Size(239, 45);
@@ -104,12 +107,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(171, 19);
+            this.label2.Font = new System.Drawing.Font("Kristen ITC", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(89, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
+            this.label2.Size = new System.Drawing.Size(303, 33);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Slogan";
+            this.label2.Text = "Coding for the future ";
             // 
             // YrityksetGV
             // 
@@ -144,20 +147,20 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.Control;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(309, 69);
+            this.label4.Font = new System.Drawing.Font("Kristen ITC", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(307, 61);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 39);
+            this.label4.Size = new System.Drawing.Size(174, 47);
             this.label4.TabIndex = 16;
             this.label4.Text = "Yritykset";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1096, 66);
+            this.label5.Font = new System.Drawing.Font("Kristen ITC", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1094, 57);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(337, 42);
+            this.label5.Size = new System.Drawing.Size(378, 51);
             this.label5.TabIndex = 17;
             this.label5.Text = "Yrityksien lisätiedot";
             // 
