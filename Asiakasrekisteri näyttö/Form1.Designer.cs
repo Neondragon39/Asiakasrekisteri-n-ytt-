@@ -35,14 +35,21 @@
             this.LisaaTiedotBT = new System.Windows.Forms.Button();
             this.PoistaTiedotBT = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.YrityksetGV = new System.Windows.Forms.DataGridView();
+            this.LisätiedotGV = new System.Windows.Forms.DataGridView();
             this.LisääYrTB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.YrityksetGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LisätiedotGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,22 +111,25 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Slogan";
             // 
-            // dataGridView1
+            // YrityksetGV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(58, 111);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(706, 417);
-            this.dataGridView1.TabIndex = 13;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.YrityksetGV.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.YrityksetGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.YrityksetGV.Location = new System.Drawing.Point(58, 111);
+            this.YrityksetGV.Name = "YrityksetGV";
+            this.YrityksetGV.Size = new System.Drawing.Size(706, 417);
+            this.YrityksetGV.TabIndex = 13;
+            this.YrityksetGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // dataGridView2
+            // LisätiedotGV
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(916, 111);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(702, 417);
-            this.dataGridView2.TabIndex = 14;
+            this.LisätiedotGV.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.LisätiedotGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LisätiedotGV.Location = new System.Drawing.Point(916, 111);
+            this.LisätiedotGV.Name = "LisätiedotGV";
+            this.LisätiedotGV.Size = new System.Drawing.Size(702, 417);
+            this.LisätiedotGV.TabIndex = 14;
+            this.LisätiedotGV.Visible = false;
             // 
             // LisääYrTB
             // 
@@ -133,8 +143,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(283, 69);
+            this.label4.Location = new System.Drawing.Point(309, 69);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(153, 39);
             this.label4.TabIndex = 16;
@@ -160,17 +171,81 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(916, 137);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(345, 32);
+            this.textBox1.TabIndex = 19;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(916, 206);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(345, 32);
+            this.textBox3.TabIndex = 20;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(916, 294);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(345, 32);
+            this.textBox5.TabIndex = 21;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(1273, 137);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(345, 32);
+            this.textBox2.TabIndex = 22;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(1273, 206);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(345, 32);
+            this.textBox4.TabIndex = 23;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(1273, 294);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(345, 32);
+            this.textBox6.TabIndex = 24;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(1103, 377);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(330, 32);
+            this.textBox7.TabIndex = 25;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1792, 650);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.LisääYrTB);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.LisätiedotGV);
+            this.Controls.Add(this.YrityksetGV);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.PoistaTiedotBT);
             this.Controls.Add(this.LisaaTiedotBT);
@@ -180,8 +255,8 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YrityksetGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LisätiedotGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -196,12 +271,19 @@
         private System.Windows.Forms.Button LisaaTiedotBT;
         private System.Windows.Forms.Button PoistaTiedotBT;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView YrityksetGV;
+        private System.Windows.Forms.DataGridView LisätiedotGV;
         private System.Windows.Forms.TextBox LisääYrTB;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
     }
 }
 

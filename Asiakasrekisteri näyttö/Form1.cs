@@ -19,7 +19,10 @@ namespace Asiakasrekisteri_näyttö
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            label1.BackColor = Color.Empty;
+            label2.BackColor = Color.Empty;
+            label4.BackColor = Color.Empty;
+            label4.BackColor = Color.Empty;
         }
     }
 }
