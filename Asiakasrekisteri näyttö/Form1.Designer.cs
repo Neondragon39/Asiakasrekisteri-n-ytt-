@@ -28,20 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.LisääYrBT = new System.Windows.Forms.Button();
             this.PoistaYrBT = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.LisaaTiedotBT = new System.Windows.Forms.Button();
+            this.PoistaTiedotBT = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.LisääYrTB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -72,23 +74,25 @@
             this.PoistaYrBT.Text = "Poista";
             this.PoistaYrBT.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // LisaaTiedotBT
             // 
-            this.button3.Location = new System.Drawing.Point(916, 572);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(217, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.LisaaTiedotBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LisaaTiedotBT.Location = new System.Drawing.Point(916, 550);
+            this.LisaaTiedotBT.Name = "LisaaTiedotBT";
+            this.LisaaTiedotBT.Size = new System.Drawing.Size(267, 45);
+            this.LisaaTiedotBT.TabIndex = 4;
+            this.LisaaTiedotBT.Text = "Lisää";
+            this.LisaaTiedotBT.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // PoistaTiedotBT
             // 
-            this.button4.Location = new System.Drawing.Point(1276, 572);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(190, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.PoistaTiedotBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PoistaTiedotBT.Location = new System.Drawing.Point(1379, 550);
+            this.PoistaTiedotBT.Name = "PoistaTiedotBT";
+            this.PoistaTiedotBT.Size = new System.Drawing.Size(239, 45);
+            this.PoistaTiedotBT.TabIndex = 5;
+            this.PoistaTiedotBT.Text = "Poista";
+            this.PoistaTiedotBT.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -99,15 +103,6 @@
             this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "Slogan";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Tähän lgo";
             // 
             // dataGridView1
             // 
@@ -149,33 +144,45 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1246, 66);
+            this.label5.Location = new System.Drawing.Point(1096, 66);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(337, 42);
             this.label5.TabIndex = 17;
             this.label5.Text = "Yrityksien lisätiedot";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(71, 82);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1729, 635);
+            this.ClientSize = new System.Drawing.Size(1792, 650);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.LisääYrTB);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.PoistaTiedotBT);
+            this.Controls.Add(this.LisaaTiedotBT);
             this.Controls.Add(this.PoistaYrBT);
             this.Controls.Add(this.LisääYrBT);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,15 +193,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button LisääYrBT;
         private System.Windows.Forms.Button PoistaYrBT;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button LisaaTiedotBT;
+        private System.Windows.Forms.Button PoistaTiedotBT;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.TextBox LisääYrTB;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
