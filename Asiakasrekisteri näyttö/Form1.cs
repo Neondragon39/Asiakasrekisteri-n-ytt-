@@ -13,7 +13,7 @@ namespace Asiakasrekisteri_näyttö
 {
     public partial class Form1 : Form
     {
-        public Boolean bIsYritysTiedot_ = true, bYhteyshenkilonTiedot_ = true;
+        public Boolean bIsYritysTiedot_ = true, bYhteyshenkilonTiedot_ = true, bPoistaTiedot_ = false;
 
         public Form1()
         {
@@ -42,6 +42,7 @@ namespace Asiakasrekisteri_näyttö
                     btnYritysYhteyshenkilot.Visible = true;
                     LisaaTiedotBT.Text = "Palaa lisätietoihin";
                     label5.Text = "Lisää lisätiedot";
+                    PoistaTiedotBT.Visible = false;
 
                     textBox1.Visible = true;
                     textBox2.Visible = true;
@@ -56,6 +57,7 @@ namespace Asiakasrekisteri_näyttö
                     btnYritysYhteyshenkilot.Visible = false;
                     LisaaTiedotBT.Text = "Lisää lisätietoa";
                     label5.Text = "Yrityksen lisätiedot";
+                    PoistaTiedotBT.Visible = true;
 
                     textBox1.Visible = false;
                     textBox2.Visible = false;
@@ -104,9 +106,33 @@ namespace Asiakasrekisteri_näyttö
             muutaTextBoxNimetValilehdenMukaan(bYhteyshenkilonTiedot_);
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void PoistaTiedotBT_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=AyOqGRjVtls");
+
+            if (bPoistaTiedot_)
+            {
+                bPoistaTiedot_ = false;
+
+                btnYritysYhteyshenkilot.Visible = false;
+                PoistaTiedotBT.Text = "Poista lisätietoa";
+                label5.Text = "Yrityksen lisätiedot";
+                LisaaTiedotBT.Visible = true;
+            }
+            else if (!bPoistaTiedot_)
+            {
+                bPoistaTiedot_ = true;
+
+                btnYritysYhteyshenkilot.Visible = false;
+                PoistaTiedotBT.Text = "Palaa lisätietoihin";
+                label5.Text = "Poista lisätietoja";
+                LisaaTiedotBT.Visible = false;
+
+                textBox1.Visible = false;
+                textBox2.Visible = false;
+                textBox3.Visible = false;
+                textBox4.Visible = false;
+                textBox5.Visible = false;
+            }
         }
     }
 }
