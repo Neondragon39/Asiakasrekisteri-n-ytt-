@@ -103,5 +103,10 @@ namespace Asiakasrekisteri_näyttö
         {
             muutaTextBoxNimetValilehdenMukaan(bYhteyshenkilonTiedot_);
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=AyOqGRjVtls");
+        }
     }
 }
