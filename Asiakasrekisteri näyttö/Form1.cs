@@ -32,6 +32,7 @@ namespace Asiakasrekisteri_näyttö
         {
             if (LisaaTiedotBT.Visible)
             {
+                btnNaytayhteydenotot.Visible = false;
                 muutaTextBoxNimetValilehdenMukaan(false);
                 textBox6.Visible = false;
 
@@ -101,6 +102,22 @@ namespace Asiakasrekisteri_näyttö
             }
         }
 
+        private void btnValitse_Click(object sender, EventArgs e)
+        {
+            LisaaTiedotBT.Visible = true;
+            PoistaTiedotBT.Visible = true;
+            btnNaytayhteydenotot.Visible = true;
+            label5.Text = "Yrityksen lisätiedot";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LisaaTiedotBT.Visible = false;
+            PoistaTiedotBT.Visible = false;
+            btnNaytayhteydenotot.Visible = false;
+            label5.Text = "Yhteydenotot asiakkaisiin";
+        }
+
         private void btnYritysYhteyshenkilot_Click(object sender, EventArgs e)
         {
             muutaTextBoxNimetValilehdenMukaan(bYhteyshenkilonTiedot_);
@@ -108,7 +125,7 @@ namespace Asiakasrekisteri_näyttö
 
         private void PoistaTiedotBT_Click(object sender, EventArgs e)
         {
-
+            btnNaytayhteydenotot.Visible = false;
             if (bPoistaTiedot_)
             {
                 bPoistaTiedot_ = false;
