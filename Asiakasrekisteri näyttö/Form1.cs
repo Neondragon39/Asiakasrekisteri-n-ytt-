@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Asiakasrekisteri_näyttö
 {
     public partial class Form1 : Form
     {
+        public Boolean bIsYritysTiedot_ = true, bYhteyshenkilonTiedot_ = true;
+
         public Form1()
         {
             InitializeComponent();
@@ -27,9 +30,78 @@ namespace Asiakasrekisteri_näyttö
 
         private void LisaaTiedotBT_Click(object sender, EventArgs e)
         {
-            btnYritysYhteyshenkilot.Visible = true;
-            LisaaTiedotBT.Text = "Palaa lisätietoihin";
-            label5.Text = "Lisää lisätiedot";
+            if (LisaaTiedotBT.Visible)
+            {
+                muutaTextBoxNimetValilehdenMukaan(false);
+                textBox6.Visible = false;
+
+                if (bIsYritysTiedot_)
+                {
+                    bIsYritysTiedot_ = false;
+
+                    btnYritysYhteyshenkilot.Visible = true;
+                    LisaaTiedotBT.Text = "Palaa lisätietoihin";
+                    label5.Text = "Lisää lisätiedot";
+
+                    textBox1.Visible = true;
+                    textBox2.Visible = true;
+                    textBox3.Visible = true;
+                    textBox4.Visible = true;
+                    textBox5.Visible = true;
+                }
+                else if (!bIsYritysTiedot_)
+                {
+                    bIsYritysTiedot_ = true;
+
+                    btnYritysYhteyshenkilot.Visible = false;
+                    LisaaTiedotBT.Text = "Lisää lisätietoa";
+                    label5.Text = "Yrityksen lisätiedot";
+
+                    textBox1.Visible = false;
+                    textBox2.Visible = false;
+                    textBox3.Visible = false;
+                    textBox4.Visible = false;
+                    textBox5.Visible = false;
+                }
+            }
+        }
+
+        private void muutaTextBoxNimetValilehdenMukaan(Boolean bIs)
+        {
+            if (bIs)
+            {
+                textBox1.Text = "yritys";
+                textBox2.Text = "asiakkaan nimi";
+                textBox3.Text = "rooli";
+                textBox4.Text = "sähköpostiosoite";
+                textBox5.Text = "puhelin numero";
+                textBox6.Visible = false;
+                bYhteyshenkilonTiedot_ = false;
+
+                label5.Text = "Lisää yhteyshenkilö";
+                btnYritysYhteyshenkilot.Text = "Palaa yrityksen lisätietoihin";
+
+
+            }
+            else if(!bIs)
+            {
+                textBox1.Text = "Y-Tunnus";
+                textBox2.Text = "Katuosoite";
+                textBox3.Text = "Postinumero";
+                textBox4.Text = "Kaupunki";
+                textBox5.Text = "toimiala";
+                textBox6.Text = "Puhelinnumero";
+                textBox6.Visible = true;
+                bYhteyshenkilonTiedot_ = true;
+
+                label5.Text = "Lisää lisätiedot";
+                btnYritysYhteyshenkilot.Text = "Lisää yhteyshenkilöiden yhteystiedot";
+            }
+        }
+
+        private void btnYritysYhteyshenkilot_Click(object sender, EventArgs e)
+        {
+            muutaTextBoxNimetValilehdenMukaan(bYhteyshenkilonTiedot_);
         }
     }
 }

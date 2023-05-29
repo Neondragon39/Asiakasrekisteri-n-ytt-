@@ -168,9 +168,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label5.Location = new System.Drawing.Point(1094, 57);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(378, 51);
+            this.label5.Size = new System.Drawing.Size(368, 51);
             this.label5.TabIndex = 17;
-            this.label5.Text = "Yrityksien lisätiedot";
+            this.label5.Text = "Yrityksen lisätiedot";
             // 
             // pictureBox1
             // 
@@ -271,6 +271,7 @@
             this.btnYritysYhteyshenkilot.Text = "Lisää yhteishenkilöiden yhteystiedot";
             this.btnYritysYhteyshenkilot.UseVisualStyleBackColor = true;
             this.btnYritysYhteyshenkilot.Visible = false;
+            this.btnYritysYhteyshenkilot.Click += new System.EventHandler(this.btnYritysYhteyshenkilot_Click);
             // 
             // Form1
             // 
